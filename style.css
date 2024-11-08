@@ -1,0 +1,131 @@
+/* CSS Dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-image: url('img/4591fe78bae108e32f6f0fc61953f4e2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+header {
+    width: 100%;
+    background-color: black;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin-left: auto;
+}
+
+.nav-links li {
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+.nav-links a {
+    color: #2169cf;
+    font-weight: 1000px;
+    letter-spacing: 1px;
+text-decoration: none;
+}
+
+.content {
+    display: flex;
+    flex-direction: row; /* Default untuk layar besar */
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 50px;
+}
+
+.text {
+    flex: 1px;
+    max-width: 60%;
+}
+
+.text h2 {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    color: white
+}
+
+.text p {
+    margin-bottom: 20px;
+    font-size: 1rem;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        padding: 30px;
+    }
+
+    .text {
+        max-width: 100%;
+    }
+
+    .text h2 {
+        font-size: 1.5rem;
+    }
+
+    .text p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 10px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        margin-left: 0;
+        margin-right: 200px;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .nav-links a {
+        padding: 5px
+    }
+
+    .content {
+        padding: 20px;
+    }
+
+    .text h2 {
+        font-size: 1.2rem;
+    }
+
+    .text p {
+        font-size: 0.8rem;
+    }
+}
+
+
